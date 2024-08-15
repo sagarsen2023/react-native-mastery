@@ -24,13 +24,15 @@ const ProductCard = ({ singleProduct }: ProductcardProps) => (
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#808080",
-    margin: 10,
     padding: 10,
     borderRadius: 10,
+    flex: 1,
+    maxWidth: "50%"
   },
   image: {
     width: "100%",
     aspectRatio: 1,
+    resizeMode: "contain"
   },
   title: {
     fontSize: 20,
