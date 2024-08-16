@@ -1,25 +1,30 @@
-import { StyleSheet, Image } from "react-native";
-import { Text, View } from "@/src/components/Themed";
+import { StyleSheet, Image, Text, View, Pressable } from "react-native";
 import { Product } from "@/src/types";
+import { Link } from "expo-router";
 
 type ProductcardProps = {
   singleProduct: Product;
 };
 
-const ProductCard = ({ singleProduct }: ProductcardProps) => (
-  <View style={styles.container}>
-    <Image
-      source={{
-        uri:
-          singleProduct.image ||
-          "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/6cheese.png",
-      }}
-      style={styles.image}
-    />
-    <Text style={styles.title}>{singleProduct.name}</Text>
-    <Text style={styles.description}>${singleProduct.price}</Text>
-  </View>
-);
+const ProductCard = ({ singleProduct }: ProductcardProps) => {
+  return (
+    <Link href={`/menu/${singleProduct.id}`} asChild>
+    <Pressable style={styles.container}>
+      <Image
+        source={{
+          uri:
+            singleProduct.image ||
+            "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/6cheese.png",
+        }}
+        style={styles.image}
+      />
+      <Text style={styles.title}>{singleProduct.name}</Text>
+      <Text style={styles.description}>${singleProduct.price}</Text>
+    </Pressable>
+  </Link>
+  )
+  
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -27,12 +32,12 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 10,
     flex: 1,
-    maxWidth: "50%"
+    maxWidth: "50%",
   },
   image: {
     width: "100%",
     aspectRatio: 1,
-    resizeMode: "contain"
+    resizeMode: "contain",
   },
   title: {
     fontSize: 20,
