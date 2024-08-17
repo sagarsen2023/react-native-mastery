@@ -1,14 +1,9 @@
-import { Text, View } from 'react-native'
 import React from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { Redirect } from 'expo-router'
 
 const index = () => {
   return (
-    <SafeAreaView>
-      <View>
-        <Text className='text`-2xl'>Uber Clone</Text>
-      </View>
-    </SafeAreaView>
+    <Redirect href={"/(auth)/welcome"}/>
   )
 }
 
