@@ -6,12 +6,9 @@ import React from "react";
 const index = () => {
   return (
     <SafeAreaView className="flex-1 items-center justify-center bg-white w-full h-full">
-      <Text className="">
-        Open up App.js to start working on your app!
-      </Text>
+      <Text className="">Uber Clone</Text>
     </SafeAreaView>
   );
 };
 
 export default index;
-
