@@ -139,7 +139,7 @@ export default function Page() {
           <View>
             <View className="py-5 flex flex-row justify-between items-center">
               <Text className="text-2xl font-JakartaExtraBold">
-                Recent Rides
+                Ryde
               </Text>
               <TouchableOpacity onPress={handleSignOut}>
                 <Image source={icons.out} className="w-6 h-6" />
@@ -154,8 +154,13 @@ export default function Page() {
               <Text className="text-xl font-JakartaBold my-3">
                 Your Current Location
               </Text>
-              <View className="flex flex-row items-center bg-transparent h-[300px]"></View>
+              <View className="flex flex-row items-center bg-transparent h-[300px]">
+                {/* Custom Map component here */}
+              </View>
             </>
+            <Text className="text-xl font-JakartaBold my-3">
+               Recent Rides
+              </Text>
           </View>
         )}
       />
