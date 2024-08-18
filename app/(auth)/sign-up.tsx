@@ -40,7 +40,7 @@ const SignUp = () => {
 
       setVerification({ ...verification, state: "pending" });
     } catch (err: any) {
-      Alert.alert(err.errors[0].longMessage);
+      Alert.alert(err.message);
     }
   };
 
@@ -71,7 +71,7 @@ const SignUp = () => {
       setVerification({
         ...verification,
         state: "failed",
-        error: err.errors[0].longMessage,
+        error: err.message
       });
     }
   };
