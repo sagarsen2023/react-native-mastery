@@ -65,10 +65,10 @@ const Welcome = () => {
       <CustomButton
         title={`${isLastIndex ? "Get Started" : "Next"}`}
         textVariant="primary"
-        className="w-11/12 mt-10"
+        classNames="w-11/12 mt-10"
         onPress={() => {
           isLastIndex
-            ? router.push("/(auth)/sign-in")
+            ? router.push("/(auth)/sign-up")
             : swiperRef.current?.scrollBy(1);
         }}
       />
