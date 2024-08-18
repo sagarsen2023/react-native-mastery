@@ -17,17 +17,17 @@ const CustomButton = ({
 
     switch (variant) {
       case "primary":
-        return "bg-primary-500 hover:bg-primary-600";
+        return "bg-primary-500 hover:bg-primary-600 shadow-md";
       case "secondary":
-        return "bg-neutral-300 hover:bg-neutral-400";
+        return "bg-neutral-300 hover:bg-neutral-400 shadow-md";
       case "danger":
         return "bg-red-500 hover:bg-red-600";
       case "outline":
-        return "text-neutral-700 hover:text-primary-500";
+        return "border border-";
       case "success":
-        return "bg-green-500 hover:bg-green-600";
+        return "bg-green-500 hover:bg-green-600 shadow-md";
       default:
-        return "bg-neutral-300 hover:bg-neutral-400";
+        return "bg-neutral-300 hover:bg-neutral-400 shadow-md";
     }
   };
 
@@ -50,7 +50,7 @@ const CustomButton = ({
 
   return (
     <TouchableOpacity
-      className={` ${classNames} w-full rounded-full flex flex-row justify-center items-center shadow-md shadow-neutral-400/70 p-3 ${getBgVariantByStyle(bgVariant)}`}
+      className={` ${classNames} w-full rounded-full flex flex-row justify-center items-center shadow-neutral-400/70 p-3 ${getBgVariantByStyle(bgVariant)}`}
       onPress={onPress}
     >
       {IconLeft && <IconLeft />}
