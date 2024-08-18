@@ -71,7 +71,7 @@ const SignIn = () => {
           <CustomButton
             title="Sign In"
             onPress={onSignInPress}
-            className="mt-6"
+            classNames="mt-6"
           />
 
           <OAuth />
