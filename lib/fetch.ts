@@ -1,18 +1,16 @@
 import { useState, useEffect, useCallback } from "react";
 
 export const fetchAPI = async (url: string, options?: RequestInit) => {
-    try {
-      const response = await fetch(url, options);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      const text = await response.text(); // Get the response as text
-      console.log("Response text:", text); // Log the response
-      return JSON.parse(text); // Then parse it as JSON
-    } catch (error) {
-      console.error("Fetch error:", error);
-      throw error;
+  try {
+    const response = await fetch(url, options);
+    if (!response.ok) {
+      new Error(`HTTP error! status: ${response.status}`);
     }
+    return await response.json();
+  } catch (error) {
+    console.error("Fetch error:", error);
+    throw error;
+  }
 };
 
 export const useFetch = <T>(url: string, options?: RequestInit) => {

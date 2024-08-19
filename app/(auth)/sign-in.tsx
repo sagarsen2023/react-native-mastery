@@ -2,6 +2,7 @@ import { useSignIn } from "@clerk/clerk-expo";
 import { Link, router } from "expo-router";
 import { useCallback, useState } from "react";
 import { Alert, Image, ScrollView, Text, View } from "react-native";
+
 import CustomButton from "@/components/CustomButton";
 import InputField from "@/components/InputField";
 import OAuth from "@/components/OAuth";
@@ -71,7 +72,7 @@ const SignIn = () => {
           <CustomButton
             title="Sign In"
             onPress={onSignInPress}
-            classNames="mt-6"
+            className="mt-6"
           />
 
           <OAuth />

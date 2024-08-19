@@ -51,7 +51,7 @@ const SignUp = () => {
         code: verification.code,
       });
       if (completeSignUp.status === "complete") {
-        await fetchAPI("/(api)/users", {
+        await fetchAPI("/(api)/user", {
           method: "POST",
           body: JSON.stringify({
             name: form.name,
@@ -118,7 +118,7 @@ const SignUp = () => {
           <CustomButton
             title="Sign Up"
             onPress={onSignUpPress}
-            classNames="mt-6"
+            className="mt-6"
           />
           <OAuth />
           <Link
@@ -131,6 +131,9 @@ const SignUp = () => {
         </View>
         <ReactNativeModal
           isVisible={verification.state === "pending"}
+          // onBackdropPress={() =>
+          //   setVerification({ ...verification, state: "default" })
+          // }
           onModalHide={() => {
             if (verification.state === "success") {
               setShowSuccessModal(true);
@@ -162,8 +165,7 @@ const SignUp = () => {
             <CustomButton
               title="Verify Email"
               onPress={onPressVerify}
-              classNames="mt-5"
-              bgVariant="success"
+              className="mt-5 bg-success-500"
             />
           </View>
         </ReactNativeModal>
@@ -182,7 +184,7 @@ const SignUp = () => {
             <CustomButton
               title="Browse Home"
               onPress={() => router.push(`/(root)/(tabs)/home`)}
-              classNames="mt-5"
+              className="mt-5"
             />
           </View>
         </ReactNativeModal>

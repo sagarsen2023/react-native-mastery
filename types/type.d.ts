@@ -1,7 +1,7 @@
 import { TextInputProps, TouchableOpacityProps } from "react-native";
 
 declare interface Driver {
-  driver_id: number;
+  id: number;
   first_name: string;
   last_name: string;
   profile_image_url: string;
@@ -34,7 +34,6 @@ declare interface MapProps {
 }
 
 declare interface Ride {
-  ride_id: string;
   origin_address: string;
   destination_address: string;
   origin_latitude: number;
@@ -45,7 +44,7 @@ declare interface Ride {
   fare_price: number;
   payment_status: string;
   driver_id: number;
-  user_email: string;
+  user_id: string;
   created_at: string;
   driver: {
     first_name: string;
@@ -60,7 +59,7 @@ declare interface ButtonProps extends TouchableOpacityProps {
   textVariant?: "primary" | "default" | "secondary" | "danger" | "success";
   IconLeft?: React.ComponentType<any>;
   IconRight?: React.ComponentType<any>;
-  classNames?: string;
+  className?: string;
 }
 
 declare interface GoogleInputProps {
