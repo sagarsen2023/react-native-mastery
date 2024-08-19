@@ -54,7 +54,8 @@
     "react-native-swiper": "^1.6.0",
     "react-native-web": "~0.19.10",
     "stripe": "^16.7.0",
-    "zustand": "^4.5.4"
+    "use-sync-external-store": "^1.2.2",
+    "zustand": "^4.5.5"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
