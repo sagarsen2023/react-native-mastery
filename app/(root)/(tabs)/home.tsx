@@ -13,6 +13,7 @@ import { Ride } from "@/types/type";
 import React, { useState } from "react";
 import { icons, images } from "@/constants";
 import GoogleTextInput from "@/components/GoogleTextInput";
+import Map from "@/components/Map";
 
 const recentRides: Ride[] = [
   {
@@ -155,7 +156,7 @@ export default function Page() {
                 Your Current Location
               </Text>
               <View className="flex flex-row items-center bg-transparent h-[300px]">
-                {/* Custom Map component here */}
+                <Map/>
               </View>
             </>
             <Text className="text-xl font-JakartaBold my-3">
